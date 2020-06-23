@@ -36,4 +36,31 @@ public class StereoTest {
     public void hasRecordPlayer(){
         assertEquals(recordPlayer, stereo.getRecordPlayer());
     }
+
+    @Test
+    public void volumeStartsAtZero(){
+        assertEquals(0, stereo.getVolume());
+    }
+
+    @Test
+    public void canRaiseVolume(){
+        stereo.raiseVolume();
+        assertEquals(1, stereo.getVolume());
+    }
+
+    @Test
+    public void canLowerVolume(){
+        stereo.raiseVolume();
+        stereo.raiseVolume();
+        stereo.lowerVolume();
+        assertEquals(1, stereo.getVolume());
+    }
+
+    @Test
+    public void cantHaveNegativeVolume(){
+        stereo.lowerVolume();
+        stereo.lowerVolume();
+        assertEquals(0, stereo.getVolume());
+    }
+
 }
