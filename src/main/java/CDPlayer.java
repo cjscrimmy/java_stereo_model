@@ -21,5 +21,17 @@ public class CDPlayer {
         return this.numberOfCDs;
     }
 
+    public String play(String cd){
+        return "Playing " + cd;
+    }
+
+    public String stop(){
+        return "Music Stopped";
+    }
+
+    public String pause(){
+        return "Music Paused";
+    }
+
 
 }
