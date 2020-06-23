@@ -1,19 +1,9 @@
-public class RecordPlayer {
-    private String make;
-    private String model;
+public class RecordPlayer extends Component{
 
     public RecordPlayer(String make, String model){
-        this.make = make;
-        this.model = model;
+        super(make, model);
     }
 
-    public String getMake(){
-        return this.make;
-    }
-
-    public String getModel(){
-        return this.model;
-    }
 
     public String play(String record){
         return "Playing " + record;
