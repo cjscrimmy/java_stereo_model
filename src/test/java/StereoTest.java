@@ -63,4 +63,46 @@ public class StereoTest {
         assertEquals(0, stereo.getVolume());
     }
 
+    @Test
+    public void canPlayCD(){
+        assertEquals("Playing OK Computer", stereo.playCD("OK Computer"));
+    }
+
+    @Test
+    public void canStopCD(){
+        assertEquals("Music Stopped", stereo.stopCD());
+    }
+
+    @Test
+    public void canPauseCD(){
+        assertEquals("Music Paused", stereo.pauseCD());
+    }
+
+    @Test
+    public void canPlayRecord(){
+        assertEquals("Playing White Album", stereo.playRecord("White Album"));
+    }
+
+    @Test
+    public void canStopRecord(){
+        assertEquals("Music Stopped", stereo.stopRecord());
+    }
+
+    @Test
+    public void canTuneRadio(){
+        assertEquals("Radio 2", stereo.tuneRadio("Radio 2"));
+    }
+
+    @Test
+    public void canConnectToStereo(){
+        Device device = new Device("mp3 player");
+        assertEquals("Connected to mp3 player", stereo.connect(device));
+    }
+
+    @Test
+    public void canConnectDevice(){
+        Device device = new Device("mp3 player");
+        assertEquals("Connected to Sony Sound System", device.connect(stereo));
+    }
+
 }

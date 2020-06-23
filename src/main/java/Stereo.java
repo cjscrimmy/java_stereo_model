@@ -42,4 +42,32 @@ public class Stereo{
             this.volume -= 1;
         }
     }
+
+    public String playCD(String cd){
+        return cdPlayer.play(cd);
+    }
+
+    public String stopCD(){
+        return cdPlayer.stop();
+    }
+
+    public String pauseCD(){
+        return cdPlayer.pause();
+    }
+
+    public String playRecord(String record){
+        return recordPlayer.play(record);
+    }
+
+    public String stopRecord(){
+        return recordPlayer.stop();
+    }
+
+    public String tuneRadio(String station){
+        return radio.tune(station);
+    }
+
+    public String connect(Device device) {
+        return "Connected to " + device.getType();
+    }
 }
