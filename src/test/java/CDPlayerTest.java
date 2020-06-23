@@ -1,0 +1,28 @@
+import org.junit.Before;
+import org.junit.Test;
+
+import static org.junit.Assert.assertEquals;
+
+public class CDPlayerTest {
+    private CDPlayer player;
+
+    @Before
+    public void before(){
+        player = new CDPlayer("Sony", "SE5", 4);
+    }
+
+    @Test
+    public void hasModel(){
+        assertEquals("SE5", player.getModel());
+    }
+
+    @Test
+    public void hasMake(){
+        assertEquals("Sony", player.getMake());
+    }
+
+    @Test
+    public void hasNumberOfCDs(){
+        assertEquals(4, player.getNumberOfCDs());
+    }
+}
